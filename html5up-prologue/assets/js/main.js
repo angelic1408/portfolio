@@ -230,14 +230,4 @@ $(document).ready(function() {
                 }
             });
     });
-
-    $(function() {
-        $('#portfolio1').on('click', function( e ) {
-            Custombox.open({
-                target: '#modal',
-                effect: 'blur'
-            });
-            e.preventDefault();
-        });
-    });
 });
