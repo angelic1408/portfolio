@@ -9,7 +9,7 @@
 		<meta name="author" content="Angelia Stefani">
 		<meta property="og:title" content="Angelia Stefanie, Interaction Designer" />
 		<meta property="og:description" content="Indonesian-born, Tokyo-based UI/UX Designer. Received her master degree at Media Design from Keio University, Japan, she's currently starting her career as designer at Tokyo. Also, a bachelor in Informatics. Talk nerd to her!"/>
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="http://portfolio.angelahwang.com/images/banner.jpg" />
 		<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     	<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
     	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -77,14 +77,17 @@
 
 			<section class="content two">
 				<div class="container">
-					<h2>Overview</h2>
-					<h5>The site can be accessed <a rel="nofollow noreferrer" href="https://lite.checkout.rakuten.co.jp/manual">here</a></h5><br>
-					<p>My second project as UI/UX designer in Rakuten. Checkout LITE Manual is a manual page, dedicated for developer who's using Checkout LITE as one of their payment option <br><br>
-					It has several pages including API reference page (how to call the API), dashboard page (how to login into the dashboard a.k.a your personal page), and features (such as Sandbox and Security Code). <br>
-					<br>
-					The goal of this project is to redesign the whole pages so it can be viewed in desktop or in mobile without breaking the layout. As times goes by, several new pages are added in order to support a detailed explanation about the newer features to the user. 
-					<br><br>
-					I managed to improve the UI/UX score by 50% according to Google Page insight score. And in additional to that, I manage improve the page load speed to 100%.
+					<h2>Redesign the Manual Site</h2>
+					<h4>Role: Designer, Engineer</h4>
+					<h5>The site can be accessed <a rel="nofollow noreferrer" href="https://lite.checkout.rakuten.co.jp/manual">here</a></h5>
+					<p>Checkout LITE Manual is a manual page, dedicated for developers who use Checkout LITE as one of their payment options. It has several pages including a API reference page (how to call the API), a dashboard page (how to login into the dashboard a.k.a your personal page), and features (such as Sandbox and Security Code).<br><br></p>
+					<h2>Problem</h2>
+					<p>The desktop version existed before the mobile version.<br>		The Dashboard and API pages was structured in 3-coloumn-page. These two pages needed to be reconstructed almost entirely because I needed to change the grid to support the mobile version. <br>
+					Designing the menu bar for mobile version.
+					</p><br>
+					<h2>Limitation</h2>
+					<p>
+					The entire project has to be done within a month. It consist of 10 subpages and the resources were limited.
 					</p><br>
 					<img class="image featured" src="images/rmanual/manual_overview.jpg" alt="Manual overview" />
 				</div>
@@ -92,21 +95,20 @@
 
 			<section class="content three">
 				<div class="container">
-					<h2>The Challenge</h2>
-					<p>The challenging part of this project is similar as when I handling the portal design. The desktop version existed before the mobile version.<br><br>
-					The Dashboard and API pages is structured in 3-coloumn-page, where the leftmost side is for the navigation, the center part is for technical explanation, and the right side is for refrence (code snippet or pictures). Those two pages need to be reconstructed almost 50% because I need to change the grid to support the mobile version<br><br>
-					In additon to that, this manual page has 2 menus. One is a general menu to navigate to Checkout LITE related site, and another menu is to navigate within manual subpages. I tackled this problem by tailoring 2 side menus. 
-					</p><br>
+					<h2>Solutions</h2>
+					<p>On mobile version, 2 menus are added on the left and right side to display primary and secondary navigation.<br>
+					Reconstruct the grid, giving it a proper structure and class name. It's easier to maintain the code and it's reusable for the other pages too.
+					</p>
+					<br>
 					<img class="image featured" src="images/rmanual/manual_nav.jpg" alt="Manual Navigation" />
 				</div>
 			</section>
 
 			<section class="content four">
 				<div class="container">
-					<h2>The Next Step</h2>
-					<p>Creating a reusable design pattern.<br><br>
-					This manual pages is always needed to be updated whenever a new features is added the LITE payment system. After several months, additional pages (How to use page and Security page) were added to give user the most relevant and helpful information.<br><br>
-					By giving a relevant class name and id name, it would be easier for any front-end developer to update the page with or without my help. 
+					<h2>Learned Lesson</h2>
+					<p>All the pages go live. Improve the UI/UX score up t0 100%,  improve the page load speed by 20%.<br>
+					If I have the chance, I'd like to make a uniform structure for all pages.
 					</p><br>
 					<img class="image featured" src="images/rmanual/manual_page.jpg" alt="Manual Subpages" />
 				</div>
@@ -137,6 +139,18 @@
 			<!-- Resource jQuery -->
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<!-- Google Analytics -->
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-87685610-1', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
 
 	</body>
 </html>

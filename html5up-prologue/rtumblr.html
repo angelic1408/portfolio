@@ -9,7 +9,7 @@
 		<meta name="author" content="Angelia Stefani">
 		<meta property="og:title" content="Angelia Stefanie, Interaction Designer" />
 		<meta property="og:description" content="Indonesian-born, Tokyo-based UI/UX Designer. Received her master degree at Media Design from Keio University, Japan, she's currently starting her career as designer at Tokyo. Also, a bachelor in Informatics. Talk nerd to her!"/>
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="http://portfolio.angelahwang.com/images/banner.jpg" />
 		<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     	<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
     	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -77,12 +77,16 @@
 
 			<section class="content two">
 				<div class="container">
-					<h2>Overview</h2>
+					<h2>Designing a Developer Blog</h2>
+					<h4>Role: Designer, Developer</h4>
 					<h5>The site can be accessed <a rel="nofollow noreferrer" href="http://rakuten-id-payment.tumblr.com">here</a></h5><br>
 					<br>
-					<p>This tumblr blog is part of our feature which was released in early 2016. The purpose for this tumblr blog is to create a media where developers could get information about the newest features or any important information such as maintenance and so on.  <br><br>
-					There was some discussion about what kind of CMS should be use to achieve that goal. Some may say wordpress or blogspot. However, due to the limited time of the project, tumblr blog is chosen for its simplicity and ease of use. <br><br>
-					Based on the analytics tool, this site is doing well. I managed to achieve stable sessions (user sessions) every months since it was released. 
+					<p>This tumblr blog is part of our feature which was released in early 2016. The purpose for this tumblr blog is to create a media where developers could get information about the newest features or any important information such as maintenance and so on.  <br><br> </p>
+					<h2>Problem</h2>
+					<p>
+					Tumblr theme is slightly different from the normal html. Tumblr is built around seven key post types: text, photos, links, quotes, chat, audio, and video, and each of them has slighly different parameters and customization.<br>
+					One of the requirement was to make the appearance not look similar to the tumblr basic style. It requires me to hide several features of tumblr such as like and reblog.<br>
+ 					Last problem: the internal company analytics tool can't be used for 3rd party content provider. 
 					</p><br>
 					<img class="image featured" src="images/rtumblr/tumblr_overview.jpg" alt="Tumblr overview" />
 				</div>
@@ -90,12 +94,12 @@
 
 			<section class="content three">
 				<div class="container">
-					<h2>The Challenge</h2>
+					<h2>Solution</h2>
 					<br>
 					<p>
-					One of the challenge on this project is tumblr theme is slightly different from the normal html. Tumblr is built around seven key post types: text, photos, links, quotes, chat, audio, and video, and each of them has slighly different parameters and customization, for example, picture post can't have a title and chat post need to be structured in data list. <br><br>
-					In addition to that, one of the requirement is to make the appearance does not look like tumblr basic style. It requires me to hide several features of tumblr such as like and reblog. I also need to create several script to hide tumblr iFrame.<br><br>
-					I applied google anyaltics in this project because the internal analytics tool can't be used for 3rd party content provider.
+					Create a script to hide tumblr iFrame. I added another script to retrive all the used tags and retrieve the latest posts. <br>
+					For the analytics tool, I added Google Analytics code as replacement for the internal tool. <br>
+					I worked extra miles to create the tumblr blog responsive.
 					</p><br>
 					<img class="image featured" src="images/rtumblr/tumblr_peek.jpg" alt="Tumblr Sneak-Peek" />
 				</div>
@@ -103,26 +107,15 @@
 
 			<section class="content four">
 				<div class="container">
-					<h2>Responsive</h2>
+					<h2>Learned Lesson</h2>
 					<br>
 					<p>
-					I worked extra miles to create the tumblr blog responsive. It was not required in the project, but I think most people check social media with their phone and it would be very nice to have a clean look even in smart phone.
-					<br><br>
-					Several javaScripts are use to achive that goal. By retrieving all the used tags, whenever user click a tag (in the sidebar or below the post title), the user will be redirected to all posts related with the tag. This will save users' time because they don't need to search for irrelevant words. <br><br>
+					The blog is live and it's constantly updated. The page speed is good and so the UX score. The site receive a positive feedback from the user when it was launched. Until now, it still gets hundreds of page view and nev visitors every month.
+					<br>
+					If I did not have enough time to tweak all post types from tumblr.If possible, I would like to style the other post such as photo and photosets post. <br> 
 					</p><br>
-					<img class="image featured" src="images/rtumblr/tumblr_wap.jpg" alt="Tumblr Details" />
-				</div>
-			</section>
+					<img class="image featured" src="images/rtumblr/tumblr_wap.jpg" alt="Tumblr WAP" />
 
-			<section class="content five">
-				<div class="container">
-					<h2>Details</h2>
-					<br>
-					<p>
-					There're several requirements that actually a little bit tricky to be implemented in tumblr. First is to retrieve the latest posts and second is to retrieve all the tags that had been used in the tumblr. 
-					<br><br>
-					Several javaScripts are use to achive that goal. By retrieving all the used tags, whenever user click a tag (in the sidebar or below the post title), the user will be redirected to all posts related with the tag. This will save users' time because they don't need to search for irrelevant words. <br><br>
-					</p><br>
 					<img class="image featured" src="images/rtumblr/tumblr_details.jpg" alt="Tumblr Details" />
 				</div>
 			</section>
@@ -151,6 +144,18 @@
 			<!-- Resource jQuery -->
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<!-- Google Analytics -->
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-87685610-1', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
 
 	</body>
 </html>

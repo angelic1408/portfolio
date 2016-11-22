@@ -9,7 +9,7 @@
 		<meta name="author" content="Angelia Stefani">
 		<meta property="og:title" content="Angelia Stefanie, Interaction Designer" />
 		<meta property="og:description" content="Indonesian-born, Tokyo-based UI/UX Designer. Received her master degree at Media Design from Keio University, Japan, she's currently starting her career as designer at Tokyo. Also, a bachelor in Informatics. Talk nerd to her!"/>
-		<meta property="og:image" content="" />
+		<meta property="og:image" content="http://portfolio.angelahwang.com/images/banner.jpg" />
 		<link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     	<link rel="apple-touch-icon" href="images/favicon/apple-touch-icon.png">
     	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png">
@@ -77,15 +77,15 @@
 
 			<section class="content two">
 				<div class="container">
-					<h2>Overview</h2>
+					<h2>Redesign the Portal Site</h2>
+					<h4>Role: Designer, Engineer</h4>
 					<h5>The site can be accessed <a rel="nofollow noreferrer" href="https://lite.checkout.rakuten.co.jp">here</a></h5><br>
-					<p>Checkout LITE is an innovative payment service from Rakuten. It was developed on 2015 and now it has hundreds of merchants and still counting. <br><br>
-					During my first 3 months in Rakuten, one of my job training is to develop the responsive version of the landing page. I also have to collaborate with other departmen to update the analytics code in the site.
-					<br>
-					<br>
-					The goal of this project is to redesign the whole pages so it can be viewed in desktop or in mobile without breaking the layout. 
-					<br><br>
-					I managed to improve the UI/UX score to 100%  according to Google Page insight score. This can be achieved by fixing the font size and tapable element size. And in additional to that, I manage improve the page load speed as well (achieved by compressing the stylesheet and script, and optimizing the image)
+					<p>Checkout LITE is an innovative payment service from Rakuten. It was developed on 2015 and now it has hundreds of merchants and still counting.<br><br> </p>
+					<h2>Problem</h2>
+					<p>The desktop version existed before the mobile version, so it was hard to decide the breakpoint. Where to put all the menus and navigations in the mobile version. <br>
+					The site analytics code (metrics) had to be changed to support the mobile version</p><br>
+					<h2>Limitation</h2>
+					<p>I was the sole engineer and developer for this project, and I have to communicate with other groups (analytics team and business team) by myself.
 					</p><br>
 					<img class="image featured" src="images/rportal/portal_overview.jpg" alt="Portal overview" />
 				</div>
@@ -93,13 +93,14 @@
 
 			<section class="content three">
 				<div class="container">
-					<h2>The Challenge</h2>
-					<p>The challenging part of this project is that the desktop version existed before the mobile version.<br><br>
-					While normally designer tailors the mobile screen version then slowly expand the screen size, I have to do the reverse desigining process for this project. 
-					To tackle that problem, I communicated with the previous designer to learn the structure of the page.<br><br>
-					Major change that I made to the page is I add a navigation menu when the page is viewed in mobile version. <br>
-					The navigation menu consists of the sitemap and also two major actions which we recommend user to click it.I added these actions on the navigation so that user can easily gain the access to the respective pages and to improve the CTR. 
+					<h2>The Solution</h2>
+					<p>Major changes that I made to the page wass to add a navigation menu when the page is viewed in mobile version. <br>
+					I decided the break point by changing my screen smaller and smaller, and when the page breaks, I marked that size as my break point.
 					</p><br>
+					<h2>Learned Lesson</h2>
+					<p>I managed to improved the UX score and page load speed (based on google page speed analytics).<br>
+					The page is active now and listed as mobile-friendly by search engine. However, if I had the chance to improve, I'd like to optimize the image and assets (script and stylesheet).</p>
+					<br>
 					<img class="image featured" src="images/rportal/portal_nav.jpg" alt="Portal Navigation" />
 				</div>
 			</section>
@@ -128,6 +129,18 @@
 			<!-- Resource jQuery -->
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<!-- Google Analytics -->
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			  ga('create', 'UA-87685610-1', 'auto');
+			  ga('send', 'pageview');
+
+			</script>
 
 	</body>
 </html>

@@ -117,6 +117,7 @@
 
 })(jQuery);
 
+// Form Validation Function
 function validateEmail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -154,7 +155,49 @@ function postContactToGoogle(){
     }
 }
 
+
 $(document).ready(function() {
+    var timelineBlocks = $('.timeline li'),
+        bars = $('.chart-bar');
+        offset = 0.8;
+
+    hideBlocks(timelineBlocks, offset);
+    hideBar(bars, offset);
+
+    //on scolling, show/animate timeline blocks when enter the viewport
+    $(window).on('scroll', function(){
+        (!window.requestAnimationFrame) 
+            ? setTimeout(function(){ showBlocks(timelineBlocks, offset); showBar(bars, offset); }, 100)
+            : window.requestAnimationFrame(function(){ showBlocks(timelineBlocks, offset); showBar(bars, offset); });
+    });
+
+    function hideBlocks(blocks, offset) {
+        blocks.each(function(){
+            ( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).find('.timeline-badge, .timeline-panel').addClass('is-hidden');
+        });
+    }
+
+    function showBlocks(blocks, offset) {
+        blocks.each(function(){
+            ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.timeline-badge').hasClass('is-hidden') ) && $(this).find('.timeline-badge, .timeline-panel').removeClass('is-hidden').addClass('bounce-in');
+        });
+    }
+
+     //Skill set  function
+    function hideBar(bar, offset) {
+        bars.each(function(){
+            $(this).addClass('is-hidden');
+            //( $(this).offset().top > $(window).scrollTop()+$(window).height()*offset ) && $(this).addClass('is-hidden');
+        });
+    }
+
+    function showBar(bar, offset) {
+        bars.each(function(){
+            ( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).hasClass('is-hidden') ) && $(this).removeClass('is-hidden').addClass('slidein');
+        });
+    }
+
+
     $('#contactForm').bootstrapValidator({
         //submitButtons: '#postForm',
         // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -230,4 +273,6 @@ $(document).ready(function() {
                 }
             });
     });
+    
+
 });
